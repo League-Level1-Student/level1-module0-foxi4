@@ -5,14 +5,14 @@ import java.util.Random;
 
 import org.jointheleague.graphical.robot.Robot;
 
-public class Houses {
+public class SnowflakeShapeAtNight {
 	Robot iCU=new Robot();
 
 	public void run() {
 		iCU.setWindowColor(Color.black);
 	iCU.miniaturize();
 iCU.moveTo(50, 500);
-iCU.setSpeed(8);
+iCU.setSpeed(10);
 iCU.penDown();
 iCU.setPenWidth(3);
 
@@ -67,21 +67,15 @@ public void drawPointyRoof(int height) {
 	iCU.move(30);
 	iCU.turn(90);
 	iCU.move(30);
-	iCU.turn(45);
+	iCU.turn(90);
 	iCU.move(height);
-	iCU.turn(-90);
+	iCU.turn(90);
 	iCU.setPenColor(Color.green);
 	iCU.setPenWidth(1);
 	iCU.move(25);
 	iCU.turn(-90);
 }
-public void drawFlatRoof() {
-	//for next time: i finished the peak thingies, i just need to do something with the flat roof method and making
-	//the large towers flat roof then im good.
 }
-}
-
-
 
 
 
