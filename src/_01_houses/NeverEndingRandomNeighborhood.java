@@ -3,11 +3,9 @@ package _01_houses;
 import java.awt.Color;
 import java.util.Random;
 
-import javax.swing.JOptionPane;
-
 import org.jointheleague.graphical.robot.Robot;
 
-public class Houses {
+public class NeverEndingRandomNeighborhood {
 	Robot iCU=new Robot();
 
 	public void run() {
@@ -20,13 +18,10 @@ iCU.setPenWidth(3);
 
 for(int i=0; i<10; i++)
 drawFlatRoofHouse(new Random().nextInt(144)+40);
-drawFlatRoofHouse("small");
-//drawPointyHouse(100);
-
+//drawFlatRoofHouse("random ;)");
+drawPointyRoof(100);
 	}
 public void drawFlatRoofHouse(int height) {
-	if(height>70) {
-
 	iCU.setPenWidth(3);
 	iCU.setRandomPenColor();
 	iCU.move(height);
@@ -39,11 +34,14 @@ public void drawFlatRoofHouse(int height) {
 	iCU.setPenWidth(1);
 	iCU.move(25);
 	iCU.turn(-90);
+	
+	if(height<=50) {
+		drawPointyRoof(new Random().nextInt(144)+40);
 	}
 	else {
-		drawPointyHouse(height);  
+		drawFlatRoofHouse(new Random().nextInt(144)+40);
 	}
-}//it doesn't look right??? there is still flat roofs less than 70 (I believe).
+}
 public void drawFlatRoofHouse(String height) {
 int wallsize=new Random().nextInt(160)+50;
 if (height.equals("small")) {
@@ -55,16 +53,27 @@ if(height.equals("medium")) {
 if(height.equals("large")) {
 	wallsize=250;
 }
-	drawFlatRoofHouse(wallsize);
+	iCU.setPenWidth(3);
+	iCU.setRandomPenColor();
+	iCU.move(wallsize);
+	iCU.turn(90);
+	iCU.move(30);
+	iCU.turn(90);
+	iCU.move(wallsize);
+	iCU.turn(-90);
+	iCU.setPenColor(Color.green);
+	iCU.setPenWidth(1);
+	iCU.move(25);
+	iCU.turn(-90);
 }
-public void drawPointyHouse(int height) {
+public void drawPointyRoof(int height) {
 	iCU.setPenWidth(3);
 	iCU.setRandomPenColor();
 	iCU.move(height);
 	iCU.turn(45);
 	iCU.move(30);
 	iCU.turn(90);
-	iCU.move(30); 
+	iCU.move(30);
 	iCU.turn(45);
 	iCU.move(height);
 	iCU.turn(-90);
@@ -74,7 +83,7 @@ public void drawPointyHouse(int height) {
 	iCU.turn(-90);
 }
 public void drawFlatRoof() {
-
+	
 }
 }
 
