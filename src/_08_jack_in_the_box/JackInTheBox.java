@@ -1,5 +1,4 @@
 package _08_jack_in_the_box;
-//continue next time. ya
 import java.applet.AudioClip;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -49,6 +48,7 @@ public class JackInTheBox implements ActionListener {
 
 		if (buttonClicked == 5) {
 			playSound("homer-woohoo.wav");
+			showPicture("jackInThebox.png");
 		}
 	}
 

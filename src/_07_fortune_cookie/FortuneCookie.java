@@ -7,11 +7,11 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class FortuneCookie implements ActionListener {
 	JFrame frame = new JFrame();
 	 JButton button = new JButton();
-	   
     public void showButton() {
         System.out.println("Button clicked");
  	   frame.setVisible(true);
