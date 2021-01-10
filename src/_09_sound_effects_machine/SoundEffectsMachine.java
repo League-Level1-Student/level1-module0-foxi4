@@ -24,13 +24,13 @@ public class SoundEffectsMachine implements ActionListener {
 		panel.add(button2);
 		panel.add(button3);
 		frame.pack();
-		button.setText("click me! (long)");
+		button.setText("click me!");
 		button2.setText("click me!");
 		button3.setText("click me!");
 		button.addActionListener(this);
 		button2.addActionListener(this);
 		button3.addActionListener(this);
-		window.setSize(1000, 500);
+		window.setSize(1000, 1000);
 
 	}
 	private void playSound(String fileName) {
